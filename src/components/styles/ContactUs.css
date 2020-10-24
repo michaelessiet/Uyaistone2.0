@@ -1,0 +1,42 @@
+.contact-us-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 20px;
+	flex-direction: column;
+	background-color: black;
+	color: white;
+}
+
+.form-container{
+	width: 30vw;
+}
+
+.header{
+	color: white;
+	padding-top: 90px;
+	font-size: 140px;
+}
+
+@media(max-width:1085px){
+	.form-container{
+		width: 50vw;
+	}
+}
+
+@media(max-width:702px){
+	.header{
+		font-size: 100px;
+	}
+}
+
+@media(max-width:500px){
+	.header{
+		font-size: 70px;
+	}
+
+	.form-container{
+		width: 70vw;
+	}
+
+}

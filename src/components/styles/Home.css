@@ -1,0 +1,97 @@
+.splash-img {
+  width: 100vw;
+  background-color: black;
+}
+
+div {
+  overflow-x: hidden;
+}
+
+.general-home-container {
+  background-color: black;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.homesplash-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+
+.homesplash-container img {
+  width: inherit;
+  height: inherit;
+  opacity: 0.5;
+}
+
+.welcome-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+.welcome-box h1 {
+  font-family: "Playfair Display", serif;
+  color: whitesmoke;
+  text-shadow: 2px 2px 3px black;
+  font-size: 50px;
+}
+
+.welcome-box {
+  background-color: none;
+  padding: 30px;
+}
+
+.explore-button {
+  margin: 30px;
+  text-decoration: none;
+}
+
+.explore-button button {
+  background-color: antiquewhite;
+  border: none;
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width: 537px) {
+  .welcome-box {
+    text-align: center;
+    padding: 20px;
+    width: 80vw;
+  }
+
+  .welcome-box h1{
+    font-size: 40px;
+  }
+
+  .homesplash-container img {
+    transform: scale(2, 1);
+    opacity: 0.5;
+  }
+
+  .explore-button {
+    margin: 30px;
+    text-decoration: none;
+  }
+
+  .explore-button button {
+    background-color: antiquewhite;
+    border: none;
+    font-size: 25px;
+    font-family: "Playfair Display", serif;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -1,0 +1,29 @@
+.footer-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+  overflow-x: hidden;
+  background-color: rgb(24, 24, 24);
+  color:  rgb(80, 80, 80);
+}
+
+.footer-container h1, p, h3, a {
+  text-align: left;
+}
+
+p a{
+  text-decoration: none;
+  color: #faebd7;
+}
+.copyright{
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  color: rgb(80, 80, 80);
+  flex-direction: column;
+}
+
+.copyright p{
+  padding-top: 15px;
+  padding-left: 40px;
+}
