@@ -13,6 +13,10 @@
     0 5px 5px rgba(0, 0, 0, 0.086), 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
+.Navbar-container h1{
+  font-family: 'Lobster';
+}
+
 .nav-logo {
   font-size: 35px;
   letter-spacing: 2px;

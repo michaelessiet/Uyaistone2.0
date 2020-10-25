@@ -19,6 +19,20 @@ export let linkStyling = css(
   }
 );
 
+export let logoStyling = css(
+  {
+    ":hover": {
+      textDecoration: "none",
+      animation: `${fade} 1s`,
+      color: "#9e2500",
+    },
+  },
+  {
+    color: "black",
+    fontFamily:"Lobster"
+  }
+)
+
 export let hoverBurger = css({
   "hover": {
     cursor : "pointer"

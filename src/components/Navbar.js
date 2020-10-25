@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles/Navbar.css";
-import { hoverBurger, linkStyling, mobileNav } from "./styles/Styles";
+import { hoverBurger, linkStyling, logoStyling, mobileNav } from "./styles/Styles";
 import HamburgerMenu from "react-hamburger-menu";
 
 const NavBar = () => {
@@ -19,7 +19,7 @@ const NavBar = () => {
     <div className="navigation">
       <div className="Navbar-container">
         <div className="navbar-items">
-          <Link {...linkStyling} className="nav-logo" to="/">
+          <Link {...logoStyling} className="nav-logo" to="/">
             Uyaistone
           </Link>
           <span className="navbar-routers">
