@@ -1,9 +1,9 @@
-import React from "react";
-import Anime from "react-anime";
+import React,{useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, Button } from "react-bootstrap";
 import "./styles/ContactUs.css";
 import emailjs from "emailjs-com";
+import { motion } from "framer-motion";
 
 const ContactUs = ({
   name,
@@ -14,6 +14,8 @@ const ContactUs = ({
   setMessage,
   subject,
   setSubject,
+  pageTransition,
+  transitionProps
 }) => {
   function sendEmail(e) {
     e.preventDefault();
@@ -37,8 +39,19 @@ const ContactUs = ({
       );
   }
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
+
   return (
-    <div className="contact-us-container">
+    <motion.div
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={pageTransition}
+      transition={transitionProps}
+      className="contact-us-container"
+    >
       <h1 className="header">Message Us</h1>
       <div>
         <Form onSubmit={sendEmail}>
@@ -99,7 +112,7 @@ const ContactUs = ({
           </Button>
         </Form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

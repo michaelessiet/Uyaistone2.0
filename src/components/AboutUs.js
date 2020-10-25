@@ -1,11 +1,22 @@
-import React from "react";
-import Anime from "react-anime";
+import { motion } from "framer-motion";
+import React, {useEffect} from "react";
 import "./styles/AboutUs.css";
 import { pages } from "./styles/Styles";
 
-function AboutUs() {
+function AboutUs({pageTransition, transitionProps}) {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
+
   return (
-    <Anime opacity={[0, 1]} duration={[5000]}>
+    <motion.div
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={pageTransition}
+      transition={transitionProps}
+    >
       <div {...pages}>
         <div className="about-us-container">
           <div className="what-we-do">
@@ -49,7 +60,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
-    </Anime>
+    </motion.div>
   );
 }
 

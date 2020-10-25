@@ -1,14 +1,26 @@
-import React from "react";
+import React , { useEffect } from "react";
 import { linkStyling, pages } from "./styles/Styles";
 import splash from "../images/homesplash.jpg";
 import "./styles/Home.css";
 import Anime from "react-anime";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-function Home() {
+function Home({pageTransition,transitionProps}) {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
+
   return (
-    <Anime opacity={[0, 1]} delay={0} duration={[5000]}>
+    <motion.div
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={pageTransition}
+      transition={transitionProps}
+    >
       <div className="general-home-container">
         <div className="homesplash-container" {...pages}>
           <img src={splash} alt="" />
@@ -17,11 +29,11 @@ function Home() {
           <Anime translateX={[1000, 0]} delay={500}>
             <div className="welcome-box">
               <Anime opacity={[0, 1]} delay={1500}>
-                <h1 style={{fontFamily:'Lobster'}}>Welcome to Uyaistone</h1>
+                <h1 style={{ fontFamily: "Lobster" }}>Welcome to Uyaistone</h1>
               </Anime>
             </div>
           </Anime>
-          <Anime opacity={[0, 1]} delay={2500} duration={10000} >
+          <Anime opacity={[0, 1]} delay={2500} duration={10000}>
             <div className="explore-button">
               <button>
                 <Anime>
@@ -34,7 +46,7 @@ function Home() {
           </Anime>
         </div>
       </div>
-    </Anime>
+    </motion.div>
   );
 }
 
